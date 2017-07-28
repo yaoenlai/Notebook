@@ -1,0 +1,9 @@
+[ 2017-07-28T17:20:22+08:00 ] 192.168.0.126 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:Favicon
+
+[ 2017-07-28T17:22:47+08:00 ] 192.168.0.126 /workman
+ERR: 无法加载模块:Workman
+

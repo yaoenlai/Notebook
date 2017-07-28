@@ -17,7 +17,7 @@ class WorkermanController{
         // 每个进程最多执行1000个请求
         define('MAX_REQUEST', 1000);
         
-        Worker::$daemonize = true;//以守护进程运行
+//         Worker::$daemonize = true;//以守护进程运行
         Worker::$pidFile = '/data/wwwlogs/CMSWorker/workerman.pid';//方便监控WorkerMan进程状态
         Worker::$stdoutFile = '/data/wwwlogs/CMSWorker/stdout.log';//输出日志, 如echo，var_dump等
         Worker::$logFile = '/data/wwwlogs/CMSWorker/workerman.log';//workerman自身相关的日志，包括启动、停止等,不包含任何业务日志
@@ -57,5 +57,8 @@ class WorkermanController{
         $worker->onerror = function($connection, $code, $msg){
             echo "error $code $msg\n";
         };
+        
+        // 运行worker
+        Worker::runAll();
     }
 }
